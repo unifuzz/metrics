@@ -15,7 +15,9 @@ RUN with GDB Exploitable: [exploitablerunner.py](./code/exploitablerunner.py)
 
 [db_crash_init.py](./code/db_crash_init.py)
 
-3. Load the docker start time to database `dockers` table
+The database schema is provided here: [unifuzz.sql](./code/unifuzz.sql)
+
+3. Load the docker containers start time to database `dockers` table
 
 [containers_starttime.py](./code/containers_starttime.py)
 
