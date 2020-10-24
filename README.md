@@ -1,6 +1,24 @@
 # UNIFUZZ Metrics
 Collecting and analyzing various metrics from fuzzing experiments.
 
+The code here is **not meant to be directly used** in your fuzzing result analysis, but to give some demonstrations and provide some insights.
+
+## Prerequisite
+
+1. Running the crash file to obtain the output of ASAN and GDB.
+
+RUN with ASAN: [crashrunner.py](./code/crashrunner.py)
+
+RUN with GDB Exploitable: [exploitablerunner.py](./code/exploitablerunner.py)
+
+2. Load the output to database
+
+[db_crash_init.py](./code/db_crash_init.py)
+
+3. Load the docker start time to database `dockers` table
+
+[containers_starttime.py](./code/containers_starttime.py)
+
 ## Quantity of Unique Bugs
 
 We suggest using top 3 functions from ASAN output to de-duplicate bugs.
