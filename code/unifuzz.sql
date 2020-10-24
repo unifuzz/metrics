@@ -51,7 +51,6 @@ CREATE TABLE `crash` (
   `queuetocrash` int(11) DEFAULT -1,
   PRIMARY KEY (`filepath`),
   KEY `exploitable_hash1` (`exploitable_hash1`),
-  KEY `bugidv2` (`bugidv2`),
   KEY `progname` (`progname`),
   KEY `exploitable_class` (`exploitable_class`),
   KEY `cve` (`cve`)

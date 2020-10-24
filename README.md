@@ -33,6 +33,14 @@ This step requires running all crash samples using ASAN and GDB (with Exploitabl
 
 Each fuzzing repetition should get its count of found bugs, so we can generate boxplot Figure **unique bugs detected by fuzzers** and Table **p value and A12 score of unique bugs** for comparing different fuzzers.
 
+Related SQL query:
+
+```
+select fuzzer, progname, dupN, count(distinct bugid) from crash where bugid>0 group by fuzzer, progname, dupN
+```
+
+Plot code: [plot_boxplot_bug_realword_all.py](./code/plot_boxplot_bug_realword_all.py)
+
 ## Quality of Bugs
 
 ### Severity
