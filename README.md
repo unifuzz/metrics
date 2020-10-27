@@ -11,15 +11,21 @@ RUN with ASAN: [crashrunner.py](./code/crashrunner.py)
 
 RUN with GDB Exploitable: [exploitablerunner.py](./code/exploitablerunner.py)
 
+**Insights:** Before executing the crash file, copy the file to another place, in case some program may override the input file (and thus destroy the file).
+
 2. Load the output to database
 
 [db_crash_init.py](./code/db_crash_init.py)
 
 The database schema is provided here: [unifuzz.sql](./code/unifuzz.sql)
 
+**Insights:** Using database to mange your experiment data.
+
 3. Load the docker containers start time to database `dockers` table
 
 [containers_starttime.py](./code/containers_starttime.py)
+
+**Insights:** The precise timestamp of starting the experiment (docker container) can be obtained using the modification time of `hostname` file. (Timezone independent)
 
 ## Quantity of Unique Bugs
 
