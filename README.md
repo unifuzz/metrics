@@ -1,7 +1,7 @@
 # UNIFUZZ Metrics
 Collecting and analyzing various metrics from fuzzing experiments.
 
-The code here is **not meant to be directly used** in your fuzzing result analysis, but to give some demonstrations and provide some insights.
+The code here is **NOT meant to be directly used** in your fuzzing result analysis, but to give some demonstrations and provide some insights.
 
 ## Prerequisite
 
@@ -52,6 +52,8 @@ Plot code: [plot_boxplot_bug_realword_all.py](./code/plot_boxplot_bug_realword_a
 ### Severity
 
 By matching a bug to CVE, we can use CVSS score as a metric to imply bug severity.
+
+CVE Matching database file can be found [here: unibench_cve.sql](https://github.com/unifuzz/unibench_cvefeed/raw/master/unibench_cve.sql), Note: this database is manually constructed and may contain errors.
 
 Besides, GDB plugin Exploitable also can give a report of whether this bug is exploitable.
 
